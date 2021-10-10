@@ -6,6 +6,8 @@
 //
 
 #import "ViewController.h"
+#import "Ring.h"
+
 
 @interface ViewController ()
 
@@ -15,8 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    
+    CGFloat length = 300;
 
+    for (int i = 14; i >= 3; i--) {
+        Ring *ring = [[Ring alloc] initWithNumberOfCorners:i
+                                                withFrame:self.view.frame
+                                                withLength:length];
+        [[[self view] layer] addSublayer:ring];
+        length -= 25;
+    }
+}
 
 @end

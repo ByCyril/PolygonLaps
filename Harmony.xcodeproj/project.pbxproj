@@ -14,6 +14,7 @@
 		F1B3D1812708D4A500CC9B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B3D1802708D4A500CC9B02 /* Assets.xcassets */; };
 		F1B3D1842708D4A500CC9B02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B3D1822708D4A500CC9B02 /* LaunchScreen.storyboard */; };
 		F1B3D1872708D4A500CC9B02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B3D1862708D4A500CC9B02 /* main.m */; };
+		F1B3D18F2708D65300CC9B02 /* Ring.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B3D18E2708D65300CC9B02 /* Ring.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		F1B3D1832708D4A500CC9B02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1B3D1852708D4A500CC9B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1B3D1862708D4A500CC9B02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1B3D18D2708D65300CC9B02 /* Ring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ring.h; sourceTree = "<group>"; };
+		F1B3D18E2708D65300CC9B02 /* Ring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ring.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				F1B3D1782708D4A500CC9B02 /* SceneDelegate.m */,
 				F1B3D17A2708D4A500CC9B02 /* ViewController.h */,
 				F1B3D17B2708D4A500CC9B02 /* ViewController.m */,
+				F1B3D18D2708D65300CC9B02 /* Ring.h */,
+				F1B3D18E2708D65300CC9B02 /* Ring.m */,
 				F1B3D17D2708D4A500CC9B02 /* Main.storyboard */,
 				F1B3D1802708D4A500CC9B02 /* Assets.xcassets */,
 				F1B3D1822708D4A500CC9B02 /* LaunchScreen.storyboard */,
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B3D18F2708D65300CC9B02 /* Ring.m in Sources */,
 				F1B3D17C2708D4A500CC9B02 /* ViewController.m in Sources */,
 				F1B3D1762708D4A500CC9B02 /* AppDelegate.m in Sources */,
 				F1B3D1872708D4A500CC9B02 /* main.m in Sources */,
@@ -302,6 +308,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,6 +336,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
