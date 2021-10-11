@@ -64,21 +64,29 @@
 		F1B3D1732708D4A500CC9B02 /* Harmony */ = {
 			isa = PBXGroup;
 			children = (
-				F1B3D1742708D4A500CC9B02 /* AppDelegate.h */,
-				F1B3D1752708D4A500CC9B02 /* AppDelegate.m */,
-				F1B3D1772708D4A500CC9B02 /* SceneDelegate.h */,
-				F1B3D1782708D4A500CC9B02 /* SceneDelegate.m */,
+				F1E9400B2714C8CA00D208F8 /* Junk */,
 				F1B3D17A2708D4A500CC9B02 /* ViewController.h */,
 				F1B3D17B2708D4A500CC9B02 /* ViewController.m */,
 				F1B3D18D2708D65300CC9B02 /* Ring.h */,
 				F1B3D18E2708D65300CC9B02 /* Ring.m */,
+				F1B3D1852708D4A500CC9B02 /* Info.plist */,
+			);
+			path = Harmony;
+			sourceTree = "<group>";
+		};
+		F1E9400B2714C8CA00D208F8 /* Junk */ = {
+			isa = PBXGroup;
+			children = (
+				F1B3D1742708D4A500CC9B02 /* AppDelegate.h */,
+				F1B3D1752708D4A500CC9B02 /* AppDelegate.m */,
+				F1B3D1772708D4A500CC9B02 /* SceneDelegate.h */,
+				F1B3D1782708D4A500CC9B02 /* SceneDelegate.m */,
 				F1B3D17D2708D4A500CC9B02 /* Main.storyboard */,
 				F1B3D1802708D4A500CC9B02 /* Assets.xcassets */,
 				F1B3D1822708D4A500CC9B02 /* LaunchScreen.storyboard */,
-				F1B3D1852708D4A500CC9B02 /* Info.plist */,
 				F1B3D1862708D4A500CC9B02 /* main.m */,
 			);
-			path = Harmony;
+			path = Junk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

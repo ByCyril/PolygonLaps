@@ -12,6 +12,7 @@
 @implementation Ring
 
 CGFloat length;
+UIBezierPath *_shapePath;
 
 - (instancetype)initWithNumberOfCorners:(int)corners withFrame:(CGRect)frame withLength:(CGFloat)length {
     self = [super init];
@@ -30,33 +31,26 @@ CGFloat length;
     
     for (int i = 0; i < corners; i++) {
                 
-        CGFloat X = (x * cos(angle)) + (y * sin(angle));
-        CGFloat Y = (-x * sin(angle)) + (y * cos(angle));
-        [_shapePath addLineToPoint:CGPointMake(X,Y)];
+        CGFloat newX = (x * cos(angle)) + (y * sin(angle));
+        CGFloat newY = (-x * sin(angle)) + (y * cos(angle));
+        [_shapePath addLineToPoint:CGPointMake(newX, newY)];
 
-        x = X;
-        y = Y;
+        x = newX;
+        y = newY;
     }
     
     [self setPath:_shapePath.CGPath];
-    
-    [self createDot:_shapePath withDuration:corners];
+    [self createDot:_shapePath withNumberOfCorners:corners];
     
     return self;
 }
 
-- (CGPoint)startingPosition {
-    return CGPointMake(0, length);
-}
-
-- (void)createDot:(UIBezierPath *)path withDuration:(CGFloat)duration {
+- (void)createDot:(UIBezierPath *)path withNumberOfCorners:(CGFloat)corners {
     
     CALayer *dotLayer = [[CALayer alloc] init];
     
-    UIImage *image = [UIImage imageNamed:@"img.png"];
-    [dotLayer setPosition:CGPointMake(100,100)];
-    [dotLayer setBounds:CGRectMake(50, 50, 25, 25)];
-    [dotLayer setContents:[image CGImage]];
+    [dotLayer setBounds:CGRectMake(0, 0, 25, 25)];
+    [dotLayer setContents:(id)[UIImage imageNamed:@"img.png"].CGImage];
     
     CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     pathAnimation.calculationMode = kCAAnimationPaced;
@@ -64,7 +58,7 @@ CGFloat length;
     pathAnimation.removedOnCompletion = NO;
     pathAnimation.repeatCount = 100;
     pathAnimation.path = path.CGPath;
-    pathAnimation.duration = 15 / (15 - duration);
+    pathAnimation.duration = 15 / (15 - corners);
 
     [dotLayer addAnimation:pathAnimation forKey:@"animation"];
     [self addSublayer:dotLayer];

@@ -12,12 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Ring : CAShapeLayer
 
-@property (nonatomic, readonly) CGPoint startingPosition;
-@property (nonatomic, readonly) UIBezierPath *shapePath;
-
 - (instancetype)initWithNumberOfCorners:(int)corners withFrame:(CGRect)frame withLength:(CGFloat)length;
-
-- (void)createDot:(UIBezierPath *)path withDuration:(CGFloat)duration;
 
 @end
 
